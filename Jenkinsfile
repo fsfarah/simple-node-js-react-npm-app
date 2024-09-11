@@ -10,6 +10,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
+                sh 'ls -l ./jenkins/scripts/test.sh'  // Optional: Verify that the script exists and is executable
                 sh './jenkins/scripts/test.sh' 
             }
         }
